@@ -3,10 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>BrinksyVault</title>
-  <meta name="description" content="BrinksyVault is a privately operated personal media server and homelab project.">
+
+  <meta
+    name="description"
+    content="BrinksyVault is a privately operated personal media server and homelab project."
+  >
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -20,21 +29,24 @@
 
     .card {
       max-width: 720px;
+      width: 100%;
       margin: 24px;
       padding: 40px;
       background: #141a2e;
       border: 1px solid #2a3455;
       border-radius: 18px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
     }
 
     h1 {
       margin-top: 0;
+      margin-bottom: 18px;
       font-size: 2.6rem;
     }
 
     h2 {
       margin-top: 32px;
+      margin-bottom: 12px;
       font-size: 1.2rem;
     }
 
@@ -48,6 +60,25 @@
       font-weight: bold;
     }
 
+    .support-button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 14px 22px;
+      background: #ffffff;
+      color: #0b1020;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .support-button:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
     .note {
       margin-top: 28px;
       padding: 18px;
@@ -56,16 +87,39 @@
       border: 1px solid #25304f;
     }
 
+    .note p {
+      margin: 0;
+    }
+
     footer {
       margin-top: 32px;
       font-size: 0.9rem;
       color: #8993a8;
     }
+
+    @media (max-width: 600px) {
+      .card {
+        margin: 14px;
+        padding: 26px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .support-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
   </style>
 </head>
 
 <body>
+
   <main class="card">
+
     <h1>BrinksyVault</h1>
 
     <p>
@@ -84,6 +138,15 @@
       </span>
     </p>
 
+    <a
+      class="support-button"
+      href="https://donate.stripe.com/3cI00l8Z52wFgby2Hn1B600"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Support BrinksyVault
+    </a>
+
     <div class="note">
       <p>
         Contributions are voluntary and do not purchase access to media,
@@ -101,6 +164,8 @@
     <footer>
       © 2026 BrinksyVault
     </footer>
+
   </main>
+
 </body>
 </html>
